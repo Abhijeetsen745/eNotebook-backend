@@ -21,7 +21,7 @@ const userSchema = new Schema({
 })
 
 const User = model('User', userSchema);
-User.createIndexes();
+// User.createIndexes();
 
 export default User;
 
