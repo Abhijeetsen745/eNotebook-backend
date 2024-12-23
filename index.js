@@ -11,7 +11,11 @@ const port = 4000
 
 //middleware
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+    origin: ['https://e-notebook-frontend-eta.vercel.app'],
+    methods:["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
+    credentials: true
+}))
 
 //routes
 app.get('/',(req,res)=>{
