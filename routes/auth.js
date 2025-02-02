@@ -37,7 +37,7 @@ router.post("/signup", async (req, res) => {
     });
 
     await newUser.save();
-    console.log(newUser);
+    // console.log(newUser);
     res.status(201).json({ success: "Signup Successfully" });
   } catch (error) {
     console.log(error);
@@ -59,7 +59,7 @@ router.post("/login", async (req, res) => {
     }
     //* Find Unique User with email
     const user = await User.findOne({ email });
-    console.log(user);
+    // console.log(user);
 
     //* if user not exists with that email
     if (!user) {
