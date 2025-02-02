@@ -22,7 +22,7 @@ const NotesSchema = new Schema({
     },
     date: {
         type: Date,
-        default: Date.now
+        default: Date.now()
     },
 });
 export default model('Notes', NotesSchema);
