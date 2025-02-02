@@ -52,7 +52,7 @@ router.put("/updatenote/:id", fetchUser, async (req, res) => {
       return res.status(401).send("Not Allowed");
     }
 
-    console.log(note);
+    // console.log(note);
 
     //* Note Update
     const notes = await Notes.findByIdAndUpdate(
@@ -102,7 +102,7 @@ router.get("/getnotes/:id", fetchUser, async (req, res) => {
     const { id } = req.params;
 
     const notes = await Notes.findById({ _id: id });
-    console.log(notes);
+    // console.log(notes);
 
     if (notes) {
       return res.status(200).json(notes);
